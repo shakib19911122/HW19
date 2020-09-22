@@ -1,21 +1,26 @@
+import React, { useContext } from "react";
+import DataAreaContext from "../../utils/DataAreaContext";
 
+const SearchBar = () => {
+    const context = useContext(DataAreaContext);
 
-import React from "react";
-
-
-function SearchBar() {
     return (
-        <div className="input-group">
-            <div className="input-group-prepend">
-                <span className="input-group-text">Search</span>
-            </div>
-            <textarea className="form-control" aria-label="With textarea"></textarea>
+        <div className="searchbox">
+            <form className="form-inline">
+                <input
+                    className="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    onChange={e => context.handleSearchChange(e)}
+                />
+                <button className="btn my-2 my-sm-0" type="submit">
+                    Search
+                 </button>
+            </form>
         </div>
-
-
-    )
+    );
 }
-
 export default SearchBar;
 
 

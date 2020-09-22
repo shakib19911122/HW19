@@ -1,14 +1,15 @@
 import React from "react";
 import Header from "./components/Header";
-import SearchBar from "./components/SearchBar"
+import List from "./components/List"
+import Wrapper from "./components/Wrapper"
 
 function App() {
   return (
     <div className="App">
-   
-     <Header />
-     <SearchBar />
-     
+    <Wrapper>
+      <Header />
+      <List />
+     </Wrapper>
    
     </div>
   );
